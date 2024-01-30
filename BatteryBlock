@@ -1,1 +1,39 @@
-{"x-namespace": "Elements", "required": [], "properties": {"Curve": {"description": "The curve.", "$ref": "https://schemas.hypar.io/Curve.json"}, "DL (KN)": {"type": "number"}, "LL (KN)": {"type": "number"}}, "additionalProperties": false, "description": "A curve which is visible in 3D.", "allOf": [{"$ref": "https://schemas.hypar.io/GeometricElement.json"}], "$id": "ModelCurve", "$schema": "http://json-schema.org/draft-07/schema#", "discriminator": "discriminator", "type": "object", "title": "ModelCurve"}
+{
+    "x-namespace": "Elements",
+    "required": [],
+    "properties": {
+        "Equipment curves": {
+            "description": "The curve.",
+            "$ref": "https://schemas.hypar.io/Curve.json"
+        },
+        "Equipment bounds curve": {
+            "description": "Length of the equipment bounding box.",
+            "$ref": "https://schemas.hypar.io/Curve.json"
+        },
+        "Clearance bounds curve": {
+            "description": "Width of the equipment bounding box.",
+            "$ref": "https://schemas.hypar.io/Curve.json"
+        },
+        "MWH": {
+            "description": "Total capacity of layout.",
+            "type": "number",
+            "$hyparUnitType": "none"
+        },
+        "Name": {
+            "description": "Name of the layout",
+            "type": "string"
+        }                          
+    },
+    "additionalProperties": false,
+    "description": "A battery storage 2d layout and parameters.",
+    "allOf": [
+        {
+            "$ref": "https://schemas.hypar.io/GeometricElement.json"
+        }
+    ],
+    "$id": "BatteryBlock",
+    "$schema": "https://github.com/MortensonConstruction/HyparSchemas/blob/main/BatteryBlock",
+    "discriminator": "discriminator",
+    "type": "object",
+    "title": "BatteryBlock"
+}
