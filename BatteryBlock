@@ -1,6 +1,16 @@
 {
+    "$id": "BatteryBlock",
+    "$schema": "https://github.com/MortensonConstruction/HyparSchemas/blob/main/BatteryBlock",
+    "description": "A battery storage 2d layout and parameters.",
+    "title": "BatteryBlock",
     "x-namespace": "Elements",
-    "required": [],
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://schemas.hypar.io/GeometricElement.json"
+        }
+    ],
+    "required": ["Clearance bounds curve"],
     "properties": {
         "Equipment curves": {
             "description": "The curve.",
@@ -24,16 +34,5 @@
             "type": "string"
         }                          
     },
-    "additionalProperties": false,
-    "description": "A battery storage 2d layout and parameters.",
-    "allOf": [
-        {
-            "$ref": "https://schemas.hypar.io/GeometricElement.json"
-        }
-    ],
-    "$id": "BatteryBlock",
-    "$schema": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BatteryBlock",
-    "discriminator": "discriminator",
-    "type": "object",
-    "title": "BatteryBlock"
+    "additionalProperties": false
 }
