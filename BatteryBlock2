@@ -1,5 +1,5 @@
 {
-    "$id": "BatteryBlock",
+    "$id": "BatteryBlock2",
     "$schema": "https://github.com/MortensonConstruction/HyparSchemas/blob/main/BatteryBlock2",
     "description": "A battery storage 2d layout and parameters.",
     "title": "BatteryBlock2",
