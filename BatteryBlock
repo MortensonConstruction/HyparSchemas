@@ -32,7 +32,7 @@
         }
     ],
     "$id": "BatteryBlock",
-    "$schema": "https://github.com/MortensonConstruction/HyparSchemas/blob/main/BatteryBlock",
+    "$schema": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BatteryBlock",
     "discriminator": "discriminator",
     "type": "object",
     "title": "BatteryBlock"
