@@ -6,7 +6,7 @@
     "x-namespace": "Elements",
     "type": ["object", "null"],
     "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],
-    "required": ["discriminator", "Elevation", "Perimeter"],
+    "required": ["discriminator", "Perimeter"],
     "discriminator": "discriminator",
     "properties": {
         "discriminator": {
