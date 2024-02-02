@@ -14,11 +14,11 @@
         },
         "EquipmentCurves": {
             "description": "Representation of equipment",
-            "$ref": "https://hypar.io/Schemas/Geometry/ModelCurve.json"
+            "$ref": "https://hypar.io/Schemas/Geometry/Profile.json"
         },
         "Perimeter": {
             "description": "Minimum bounding box of equipemnt and required clearances",
-            "$ref": "https://raw.githubusercontent.com/hypar-io/Elements/master/Schemas/Geometry/Polygon.json"
+            "$ref": "https://hypar.io/Schemas/Geometry/ModelCurve.json"
         },
         "MWH": {
             "description": "Total capacity of layout.",
