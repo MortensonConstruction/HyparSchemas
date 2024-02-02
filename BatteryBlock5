@@ -1,0 +1,30 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BatteryBlock5",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Block of batteries.",
+    "title": "BatteryBlock5",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],
+    "required": ["discriminator", "Perimeter"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+          "type": "string"
+        },
+        "EquipmentCurves": {
+            "description": "Representation of equipment",
+            "$ref": "https://hypar.io/Schemas/Geometry/Profile.json"
+        },
+        "Perimeter": {
+            "description": "Minimum bounding box of equipemnt and required clearances",
+            "$ref": "https://hypar.io/Schemas/Geometry/ModelCurve.json"
+        },
+        "MWH": {
+            "description": "Total capacity of layout.",
+            "type": "number",
+            "$hyparUnitType": "none"
+        }
+    },
+    "additionalProperties": false
+}
