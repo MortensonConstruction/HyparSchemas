@@ -14,10 +14,8 @@
         },
         "EquipmentCurves": {
             "type": ["array","null"],
-            "description": "Representation of equipment",
-            "items": {
-            "$ref": "https://hypar.io/Schemas/Geometry/ModelCurve.json"
-            }
+            "description": "A collection of Polygons representing voids in the profile.",
+            "items": {"$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"}
         },
         "Perimeter": {
             "description": "Minimum bounding box of equipemnt and required clearances",
