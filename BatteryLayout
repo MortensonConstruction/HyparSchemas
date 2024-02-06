@@ -1,0 +1,25 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BatteryLayout",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A battery block layout",
+    "title": "BatteryLayout",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],  
+    "required": ["discriminator", "Profile"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+          "type": "string"
+        },      
+        "Profile": {
+            "description": "The clearance perimeter and module polygons",
+            "$ref": "https://hypar.io/Schemas/Geometry/Profile.json"
+        },
+        "MWH": {
+            "description": "Total megawatt hour capacity of block",
+            "type": "number"
+        }
+    },
+    "additionalProperties": false
+}
