@@ -17,9 +17,11 @@
             "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
         },
         "Modules": {
-            "type": ["array","null"],
-            "description": "The equipment modules",
-            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            "description": "The equipment modules.",
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/Polygon.json"
+            }
         },
         "MWH": {
             "description": "Total megawatt hour capacity of block",
