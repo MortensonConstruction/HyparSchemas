@@ -26,6 +26,9 @@
         "MWH": {
             "description": "Total megawatt hour capacity of block",
             "type": "number"
+        },
+        "Centroid": {
+            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
         }
     },
     "additionalProperties": false
