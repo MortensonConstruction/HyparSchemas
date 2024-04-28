@@ -30,7 +30,8 @@
         "Centroid": {
             "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
         },
-        "2DRep":{
+        "ModelCurves":{
+            "type": "array",
             "$ref": "https://schemas.hypar.io/ModelCurve.json"
         },
     },
