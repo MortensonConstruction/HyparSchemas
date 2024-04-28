@@ -32,7 +32,9 @@
         },
         "ModelCurves":{
             "type": "array",
-            "$ref": "https://schemas.hypar.io/ModelCurve.json"
+            "items": {
+                "$ref": "https://schemas.hypar.io/ModelCurve.json"
+            }
         },
     },
     "additionalProperties": false
