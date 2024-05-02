@@ -23,8 +23,8 @@
                 "$ref": "https://schemas.hypar.io/Polygon.json"
             }
         },
-        "KWH": {
-            "description": "Total kilowatt hour capacity of block",
+        "MWH": {
+            "description": "Total megawatt hour capacity of block",
             "type": "number"
         },
         "Centroid": {
