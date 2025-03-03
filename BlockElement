@@ -22,9 +22,9 @@
             "$hyparUnitType": "none"
         },
         "Width":{
-        "description": "Length of element in X direction",
-        "type": "number",
-        "$hyparUnitType": "none"
+            "description": "Length of element in X direction",
+            "type": "number",
+            "$hyparUnitType": "none"
         },
         "BottomClearance":{
             "description": "Clearance to the -Y",
