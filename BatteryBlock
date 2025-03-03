@@ -12,12 +12,12 @@
         "discriminator": {
           "type": "string"
         },
-        "EquipmentCurves": {
-            "description": "Representation of equipment",
-            "$ref": "https://hypar.io/Schemas/Geometry/Profile.json"
+        "Containers": {
+            "description": "Arranged container polygons",
+            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
         },
-        "Perimeter": {
-            "description": "Minimum bounding box of equipemnt and required clearances",
+        "Support Equipment": {
+            "description": "Arranged equipment polygons",
             "$ref": "https://hypar.io/Schemas/Geometry/ModelCurve.json"
         },
         "MWH": {
