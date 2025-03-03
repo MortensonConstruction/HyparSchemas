@@ -1,0 +1,44 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BlockElement",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "An element of a battery block",
+    "title": "BlockElement",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],  
+    "required": ["discriminator", "Profile"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+          "type": "string"
+        },      
+        "Length":{
+            "description": "Length of element in Y direction",
+            "$ref": 
+        "Perimeter": {
+            "description": "The clearance perimeter polygon",
+            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+        },
+        "Modules": {
+            "description": "The equipment modules.",
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/Polygon.json"
+            }
+        },
+        "MWH": {
+            "description": "Total megawatt hour capacity of block",
+            "type": "number"
+        },
+        "Centroid": {
+            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        },
+        "ModelCurves":{
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/ModelCurve.json"
+            }
+        },
+    },
+    "additionalProperties": false
+}
