@@ -12,7 +12,7 @@
         "discriminator": {
           "type": "string"
         },
-        "Name":{
+        "Block Name":{
             "description": "Block name",
             "type" : "string",
         },
