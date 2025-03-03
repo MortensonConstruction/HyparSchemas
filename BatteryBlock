@@ -18,11 +18,17 @@
         },
         "Containers": {
             "description": "Arranged container polygons",
-            "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BlockElement"
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BlockElement"
+            }   
         },
         "Support Equipment": {
             "description": "Arranged equipment polygons",
-            "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BlockElement"
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BlockElement"
+            }   
         },
         "MWH": {
             "description": "Total capacity of layout.",
