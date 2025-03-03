@@ -14,21 +14,41 @@
         },      
         "Length":{
             "description": "Length of element in Y direction",
-            "$ref": 
+            "type": "number",
+            "$hyparUnitType": "none"
+        },
+        "Width":{
+        "description": "Length of element in X direction",
+        "type": "number",
+        "$hyparUnitType": "none"
+        },
+        "BottomClearance":{
+            "description": "Clearance to the -Y",
+            "type": "number",
+            "$hyparUnitType": "none"
+        },
+        "LeftClearance":{
+            "description": "Clearance to the X",
+            "type": "number",
+            "$hyparUnitType": "none"
+        },
+        "TopClearance":{
+            "description": "Clearance to the Y",
+            "type": "number",
+            "$hyparUnitType": "none"
+        },
+        "RightClearance":{
+            "description": "Clearance to the -X",
+            "type": "number",
+            "$hyparUnitType": "none"
+        },
         "Perimeter": {
-            "description": "The clearance perimeter polygon",
+            "description": "The element polygon",
             "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
         },
-        "Modules": {
-            "description": "The equipment modules.",
-            "type": "array",
-            "items": {
-                "$ref": "https://schemas.hypar.io/Polygon.json"
-            }
-        },
-        "MWH": {
-            "description": "Total megawatt hour capacity of block",
-            "type": "number"
+        "ClearanceBox": {
+            "description": "The element clearance polygon",
+            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
         },
         "Centroid": {
             "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
