@@ -12,13 +12,17 @@
         "discriminator": {
           "type": "string"
         },
+        "Name":{
+            "description": "Block name",
+            "type" : "string",
+        },
         "Containers": {
             "description": "Arranged container polygons",
-            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BlockElement"
         },
         "Support Equipment": {
             "description": "Arranged equipment polygons",
-            "$ref": "https://hypar.io/Schemas/Geometry/ModelCurve.json"
+            "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BlockElement"
         },
         "MWH": {
             "description": "Total capacity of layout.",
