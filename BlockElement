@@ -11,7 +11,11 @@
     "properties": {
         "discriminator": {
           "type": "string"
-        },      
+        },
+        "Element type":{
+            "description": "Element classification",
+            "type" : "string",
+        },
         "Length":{
             "description": "Length of element in Y direction",
             "type": "number",
