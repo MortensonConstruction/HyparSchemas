@@ -6,7 +6,7 @@
     "x-namespace": "Elements",
     "type": ["object", "null"],
     "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],  
-    "required": ["discriminator", "Profile"],
+    "required": ["discriminator", "Polygon"],
     "discriminator": "discriminator",
     "properties": {
         "discriminator": {
