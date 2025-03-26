@@ -1,0 +1,28 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/TestFit",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A block test fit",
+    "title": "TestFit",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],  
+    "required": ["discriminator", "Profile"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+          "type": "string"
+        },
+        "Block type":{
+            "description": "The type of the block used",
+            "type" : "string"
+        },
+        "BlockFits": {
+            "description": "The matrix of test fit blocks.",
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/Polygon.json"
+            }
+        },
+    },
+    "additionalProperties": false
+}
