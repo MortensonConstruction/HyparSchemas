@@ -10,9 +10,9 @@
     "discriminator": "discriminator",
     "properties": {
         "discriminator": {
-          "type": "string"
+        "type": "string"
         },
-        "Block type":{
+        "BlockType":{
             "description": "The type of the block used",
             "type" : "string"
         },
