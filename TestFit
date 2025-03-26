@@ -12,12 +12,12 @@
         "discriminator": {
         "type": "string"
         },
-        "BlockType":{
+        "BlockType": {
             "description": "The type of the block used",
-            "type" : "string"
+            "type": "string"
         },
         "BlockFits": {
-            "description": "The matrix of test fit blocks.",
+            "description": "The matrix of test fit blocks",
             "type": "array",
             "items": {
                 "$ref": "https://schemas.hypar.io/Polygon.json"
