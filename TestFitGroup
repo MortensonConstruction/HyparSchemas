@@ -1,0 +1,28 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/TestFitGroup",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A group of block test fits",
+    "title": "TestFitGroup",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],  
+    "required": ["discriminator", "Polygon"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+        "type": "string"
+        },
+        "RegionID": {
+            "description": "Layout region designator",
+            "type": "number"
+        },
+        "BlockFits": {
+            "description": "The list of test fits for the layour region",
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/TestFit"
+            }
+        },
+    },
+    "additionalProperties": false
+}
