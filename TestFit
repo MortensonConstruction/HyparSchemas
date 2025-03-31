@@ -22,13 +22,7 @@
             "items": {
                 "$ref": "https://schemas.hypar.io/Polygon.json"
             }
-        },
-        "ModelCurves":{
-            "type": "array",
-            "items": {
-                "$ref": "https://schemas.hypar.io/ModelCurve.json"
-            }
-        },
+        }
     },
     "additionalProperties": false
 }
