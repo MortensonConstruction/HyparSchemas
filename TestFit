@@ -12,23 +12,17 @@
         "discriminator": {
         "type": "string"
         },
-        "BlockType": {
-            "description": "The type of the block used",
+        "TestFitId": {
+            "description": "The type and count of blocks in the test fit",
             "type": "string"
         },
-        "BlockFits": {
+        "TestFits": {
             "description": "The matrix of test fit blocks",
             "type": "array",
             "items": {
                 "$ref": "https://schemas.hypar.io/Polygon.json"
             }
-        },
-        "ModelCurves":{
-            "type": "array",
-            "items": {
-                "$ref": "https://schemas.hypar.io/ModelCurve.json"
-            }
-        },
+        }
     },
     "additionalProperties": false
 }
