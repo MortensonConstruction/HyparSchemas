@@ -16,6 +16,11 @@
             "description": "Layout region designator",
             "type": "number"
         },
+        "LayoutRegion": {
+            "description": "Layout region",
+            "type": "polygon"
+            "$ref" : "$ref": "https://schemas.hypar.io/Polygon.json"
+        },
         "BlockFits": {
             "description": "The list of test fits for the layour region",
             "type": "array",
