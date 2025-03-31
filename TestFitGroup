@@ -18,7 +18,7 @@
         },
         "LayoutRegion": {
             "description": "Layout region",
-            "$ref" : "https://schemas.hypar.io/Polygon.json"
+            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
         },
         "BlockFits": {
             "description": "The list of test fits for the layour region",
