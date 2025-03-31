@@ -14,7 +14,7 @@
         },
         "RegionID": {
             "description": "Layout region designator",
-            "type": "number"
+            "type": "integer"
         },
         "LayoutRegion": {
             "description": "Layout region",
