@@ -18,7 +18,6 @@
         },
         "LayoutRegion": {
             "description": "Layout region",
-            "type": "polygon",
             "$ref" : "https://schemas.hypar.io/Polygon.json"
         },
         "BlockFits": {
