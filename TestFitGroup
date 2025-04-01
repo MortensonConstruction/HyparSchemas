@@ -26,7 +26,13 @@
             "items": {
                 "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/TestFit"
             }
-        }
+        },
+        "ModelCurves":{
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/ModelCurve.json"
+            }
+        },
     },
     "additionalProperties": false
 }
