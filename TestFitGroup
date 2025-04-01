@@ -20,12 +20,16 @@
             "description": "Layout region",
             "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
         },
-        "TestFits": {
+        "TestFitOptions": {
             "description": "The list of test fits for the layour region",
             "type": "array",
             "items": {
                 "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/TestFit"
             }
+        },
+        "SelectedTestFit": {
+            "description": "Selected test fit",
+            "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/TestFit"
         },
         "ModelCurves":{
             "type": "array",
