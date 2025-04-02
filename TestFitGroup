@@ -36,12 +36,7 @@
             "items": {
                 "$ref": "https://schemas.hypar.io/ModelCurve.json"
             }
-        },
-        "Representation": {
-            "description": "The element's representation.",
-            "$ref": "https://hypar.io/Schemas/Geometry/Representation.json"
-        },
-            
+        }            
     },
     "additionalProperties": false
 }
