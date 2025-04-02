@@ -29,7 +29,10 @@
         },
         "SelectedTestFitPolys": {
             "description": "Selected test fit",
-            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
         },
         "BlockModelCurves":{
             "type": "array",
