@@ -31,7 +31,7 @@
             "description": "Selected test fit",
             "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
         },
-        "ModelCurves":{
+        "BlockModelCurves":{
             "type": "array",
             "items": {
                 "$ref": "https://schemas.hypar.io/ModelCurve.json"
