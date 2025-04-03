@@ -1,5 +1,5 @@
 {
-    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BlockConfiguration",
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/BlockConfig",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "description": "A block configuration",
     "title": "BlockConfig",
