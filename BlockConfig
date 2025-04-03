@@ -15,7 +15,7 @@
         "Block type": {
             "description": "Type of block",
             "type": "string"
-        }
+        },
         "BlockBounds": {
             "description": "The clearance bounds polygon",
             "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
