@@ -33,7 +33,7 @@
                 "type": "string"
             }
         }, 
-        "SelectedTestFitPolys": {
+        "SelectedArrangementPolys": {
             "description": "Selected test fit",
             "type": "array",
             "items": {
