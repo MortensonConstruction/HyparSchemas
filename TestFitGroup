@@ -24,7 +24,7 @@
             "description": "The list of test fits for the layour region",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/TestFit"
+                "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/BatteryArrangement"
             }
         },
         "TestFitOptionIDs":{
