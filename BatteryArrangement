@@ -1,0 +1,62 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/BatteryArrangement",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A battery arrangement",
+    "title": "BatteryArrangement",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],  
+    "required": ["discriminator", "Polygon"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+        "type": "string"
+        },
+        "ArrangementPerimeter": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+        },
+        "Roads": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/Polygon.json"
+             }
+        },
+        "LayoutRegion": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+        },
+        "TestFitId": {
+            "description": "The type and count of blocks in the test fit",
+            "type": "string"
+        },       
+        "Containers": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/Polygon.json"
+             }
+        },
+        "PCSs": {
+          "type": "array",
+          "items": {
+              "$ref": "https://schemas.hypar.io/Polygon.json"
+          }
+        },
+        "AuxPanels": {
+          "type": "array",
+          "items": {
+              "$ref": "https://schemas.hypar.io/Polygon.json"
+        },
+        "AuxPanels": {
+          "type": "array",
+          "items": {
+              "$ref": "https://schemas.hypar.io/Polygon.json"
+          }
+        },
+        "AuxSkids": {
+          "type": "array",
+          "items": {
+              "$ref": "https://schemas.hypar.io/Polygon.json"
+          }
+        }
+    },
+    "additionalProperties": false
+}
