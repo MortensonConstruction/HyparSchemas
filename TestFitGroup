@@ -33,8 +33,31 @@
                 "type": "string"
             }
         }, 
-        "SelectedArrangementPolys": {
-            "description": "Selected test fit",
+        "SelectedContainers": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "SelectedPCSs": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "SelectedAuxPanels": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "SelectedAuxSkids": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "SelectedRoads": {
             "type": "array",
             "items": {
                 "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
