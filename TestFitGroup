@@ -24,7 +24,7 @@
             "description": "The list of test fits for the layour region",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/TestFit"
+                "$ref": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/BatteryArrangement"
             }
         },
         "TestFitOptionIDs":{
@@ -33,11 +33,34 @@
                 "type": "string"
             }
         }, 
-        "SelectedTestFitPolys": {
-            "description": "Selected test fit",
+        "SelectedContainers": {
             "type": "array",
             "items": {
                 "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "SelectedPCSs": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "SelectedAuxPanels": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "SelectedAuxSkids": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "SelectedRoads": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/Polyline.json"
             }
         },
         "BlockModelCurves":{
