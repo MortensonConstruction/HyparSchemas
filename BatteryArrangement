@@ -18,7 +18,7 @@
         "Roads": {
             "type": "array",
             "items": {
-                "$ref": "https://schemas.hypar.io/Polygon.json"
+                "$ref": "https://schemas.hypar.io/Polyline.json"
              }
         },
         "LayoutRegion": {
