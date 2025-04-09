@@ -60,7 +60,7 @@
         "SelectedRoads": {
             "type": "array",
             "items": {
-                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+                "$ref": "https://schemas.hypar.io/Polyline.json"
             }
         },
         "BlockModelCurves":{
