@@ -1,0 +1,57 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/main/Arrangement",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "An arrangement for a layout region",
+    "title": "Arrangement",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],  
+    "required": ["discriminator", "Polygon"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+        "type": "string"
+        },
+        "LayoutRegion": {
+            "description": "Layout region",
+            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+        },
+        "Containers": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "PCSs": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "AuxPanels": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "AuxSkids": {
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
+        },
+        "Roads": {
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/Polyline.json"
+            }
+        },
+        "ModelCurves":{
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/ModelCurve.json"
+            }
+        }            
+    },
+    "additionalProperties": false
+}
