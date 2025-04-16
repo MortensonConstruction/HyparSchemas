@@ -16,6 +16,9 @@
             "description": "Layout region",
             "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
         },
+        "Centroid": {
+            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        },
         "Containers": {
             "type": "array",
             "items": {
