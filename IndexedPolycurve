@@ -17,7 +17,7 @@
       "items": {
         "$ref": "https://schemas.hypar.io/Vector3.json"
       }
-    }
+    },
     "CurveIndicies": {
         "type": "array",
         "items": {
