@@ -28,8 +28,11 @@
             }
         },
         "PCS": {
-            "description": "The PCS or Transformer",
-            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            "description": "The PCS or Transformer(s)",
+            "type": "array",
+            "items": {
+                "$ref": "https://schemas.hypar.io/Polygon.json"
+            }
         },
         "Aux panel": {
             "description": "The aux panel",
