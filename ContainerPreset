@@ -1,0 +1,65 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/ContainerPreset",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A named container product preset sourced from the Firestore catalog. Emitted by the PresetCatalog function and consumed by BlockConfiguration / PcsPlacement via $hyparEnumQuery to populate the Preset dropdown and drive container dimensions, clearances, and MWh.",
+    "title": "ContainerPreset",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/Element.json"}],
+    "required": ["discriminator", "Name", "Manufacturer", "Container", "Hour Configuration"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+            "type": "string"
+        },
+        "Name": {
+            "description": "Composed display name (Manufacturer + Container + Hour Configuration). Acts as the dropdown option label and Firestore document ID.",
+            "type": "string"
+        },
+        "Manufacturer": {
+            "description": "Container manufacturer, e.g. 'Tesla', 'Samsung'.",
+            "type": "string"
+        },
+        "Container": {
+            "description": "Container model, e.g. 'Megapack 2XL', 'SBB1.5'.",
+            "type": "string"
+        },
+        "Hour Configuration": {
+            "description": "Energy duration configuration, e.g. '4 hr', '8 hr'.",
+            "type": "string"
+        },
+        "Container Length": {
+            "description": "Long dimension of the container.",
+            "type": "number"
+        },
+        "Container Width": {
+            "description": "Short dimension of the container.",
+            "type": "number"
+        },
+        "Container Bottom Clearance": {
+            "description": "Clear area to the South side of the container.",
+            "type": "number"
+        },
+        "Container Right Clearance": {
+            "description": "Clear area to the East side of the container.",
+            "type": "number"
+        },
+        "Container Top Clearance": {
+            "description": "Clear area to the North side of the container.",
+            "type": "number"
+        },
+        "Container Left Clearance": {
+            "description": "Clear area to the West side of the container.",
+            "type": "number"
+        },
+        "MWH Per Container": {
+            "description": "Nameplate megawatt-hour capacity per container.",
+            "type": "number"
+        },
+        "Units": {
+            "description": "Unit system the dimensions are in. Typically 'imperial' (feet).",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}
