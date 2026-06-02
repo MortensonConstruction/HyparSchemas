@@ -6,14 +6,14 @@
     "x-namespace": "Elements",
     "type": ["object", "null"],
     "allOf": [{"$ref": "https://hypar.io/Schemas/Element.json"}],
-    "required": ["discriminator", "Name", "Manufacturer", "Container", "Hour Configuration"],
+    "required": ["discriminator", "PresetName", "Manufacturer", "Container", "Hour Configuration"],
     "discriminator": "discriminator",
     "properties": {
         "discriminator": {
             "type": "string"
         },
-        "Name": {
-            "description": "Composed display name (Manufacturer + Container + Hour Configuration). Acts as the dropdown option label and Firestore document ID.",
+        "PresetName": {
+            "description": "Composed display name (Manufacturer + Container + Hour Configuration). Acts as the dropdown option label and Firestore document ID. (Not named 'Name' to avoid colliding with the inherited Element.Name property in code generation.)",
             "type": "string"
         },
         "Manufacturer": {
