@@ -1,0 +1,57 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/PCSPreset",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A named PCS / transformer preset sourced from the Firestore catalog. Emitted by the PcsCatalog function and consumed by BlockConfiguration via $hyparEnumQuery to populate the PCS Preset dropdown and drive PCS dimensions + clearances.",
+    "title": "PCSPreset",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/Element.json"}],
+    "required": ["discriminator", "PresetName"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+            "type": "string"
+        },
+        "PresetName": {
+            "description": "Display name (Manufacturer + Model). Acts as the dropdown option label and Firestore document ID.",
+            "type": "string"
+        },
+        "Manufacturer": {
+            "description": "PCS manufacturer.",
+            "type": "string"
+        },
+        "Model": {
+            "description": "PCS model name.",
+            "type": "string"
+        },
+        "PCSLength": {
+            "description": "Long dimension of the PCS.",
+            "type": "number"
+        },
+        "PCSWidth": {
+            "description": "Short dimension of the PCS.",
+            "type": "number"
+        },
+        "PCSTopClearance": {
+            "description": "Clear area to the North side of the PCS.",
+            "type": "number"
+        },
+        "PCSBottomClearance": {
+            "description": "Clear area to the South side of the PCS.",
+            "type": "number"
+        },
+        "PCSLeftClearance": {
+            "description": "Clear area to the West side of the PCS.",
+            "type": "number"
+        },
+        "PCSRightClearance": {
+            "description": "Clear area to the East side of the PCS.",
+            "type": "number"
+        },
+        "Units": {
+            "description": "Unit system the dimensions are in. Either 'imperial' (feet) or 'metric' (meters).",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

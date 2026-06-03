@@ -5,7 +5,7 @@
     "title": "BlockConfig",
     "x-namespace": "Elements",
     "type": ["object", "null"],
-    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],  
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],
     "required": ["discriminator", "Polygon"],
     "discriminator": "discriminator",
     "properties": {
