@@ -54,12 +54,11 @@
             "description": "Megawatt hour capacity of each container",
             "type": "number"
         },
-            "MirrorAcrossBothAxes": {                                                                                                                                       
-                "description": "True for block types whose facing row in a mirrored pair must be flipped left-to-right as well as front-to-back, so an asymmetric           
-  container-column layout can nest against its partner row instead of colliding with a copy of itself.",                                                                    
-                "type": "boolean",                                                                                                                                          
-                "default": false                                                                                                                                            
-            }                    
+        "MirrorAcrossBothAxes": { 
+            "description": "True for block types whose facing row in a mirrored pair must be flipped left-to-right as well as front-to-back.",    
+            "type": "boolean",
+            "default": false
+        }
     },
     "additionalProperties": false
 }
