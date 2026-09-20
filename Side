@@ -1,0 +1,33 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/Side",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A selectable side (chain) of a plant arrangement",
+    "title": "Side",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],
+    "required": ["discriminator"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+            "type": "string"
+        },
+        "RegionCentroid": {
+            "description": "The centroid of the layout region this side belongs to",
+            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        },
+        "ChainCentroid": {
+            "description": "The centroid of this side's chain of rows",
+            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        },
+        "ChainID": {
+            "description": "The 0-based chain index (ordered by depth from the region origin)",
+            "type": "integer"
+        },
+        "Footprint": {
+            "description": "The selection footprint of this side (union of its row footprints)",
+            "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+        }
+    },
+    "additionalProperties": false
+}
