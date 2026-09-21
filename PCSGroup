@@ -1,0 +1,48 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/PCSGroup",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A daisy-chained group of PCS units feeding a shared MV cable circuit",
+    "title": "PCSGroup",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],
+    "required": ["discriminator"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+            "type": "string"
+        },
+        "RegionCentroid": {
+            "description": "The centroid of the layout region this group belongs to",
+            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        },
+        "ChainCentroid": {
+            "description": "The centroid of the side (chain of rows) this group belongs to",
+            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        },
+        "ChainID": {
+            "description": "The 0-based chain index this group belongs to",
+            "type": "integer"
+        },
+        "GroupID": {
+            "description": "The 0-based group index within the region",
+            "type": "integer"
+        },
+        "PCSCentroids": {
+            "description": "The world-space centroids of the PCS units in this group, in daisy-chain order",
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+            }
+        },
+        "SourceSkidCentroid": {
+            "description": "The centroid of the aux skid this group is tied to, or null if no aux skid produced this group",
+            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        },
+        "GroupingStrategy": {
+            "description": "The name of the grouping strategy that produced this group",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}
