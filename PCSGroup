@@ -37,7 +37,10 @@
         },
         "SourceSkidCentroid": {
             "description": "The centroid of the aux skid this group is tied to, or null if no aux skid produced this group",
-            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+            "oneOf": [
+                {"$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"},
+                {"type": "null"}
+            ]
         },
         "GroupingStrategy": {
             "description": "The name of the grouping strategy that produced this group",
