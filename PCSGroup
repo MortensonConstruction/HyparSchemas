@@ -45,6 +45,10 @@
         "GroupingStrategy": {
             "description": "The name of the grouping strategy that produced this group",
             "type": "string"
+        },
+        "LayoutAngle": {
+            "description": "The rotation angle (degrees, about RegionCentroid, matching the region's layout rotation) that maps this group's block layout to world space. Used to route cables orthogonal to the block rows rather than world axes.",
+            "type": "number"
         }
     },
     "additionalProperties": false
