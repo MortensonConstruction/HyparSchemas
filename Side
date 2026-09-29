@@ -27,6 +27,13 @@
         "Footprint": {
             "description": "The selection footprint of this side (union of its row footprints)",
             "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+        },
+        "RowFootprints": {
+            "description": "This side's row footprints, one per block row in its chain. Unlike Footprint (the union of every row), gaps between rows -- e.g. where an aux skid sits -- are not included, so routing logic can tell those gaps apart from a row's own solid interior.",
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+            }
         }
     },
     "additionalProperties": false
