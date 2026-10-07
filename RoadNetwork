@@ -1,0 +1,36 @@
+{
+    "$id": "https://raw.githubusercontent.com/MortensonConstruction/HyparSchemas/refs/heads/main/RoadNetwork",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "The road centerline network of one layout region, for routing along roads",
+    "title": "RoadNetwork",
+    "x-namespace": "Elements",
+    "type": ["object", "null"],
+    "allOf": [{"$ref": "https://hypar.io/Schemas/GeometricElement.json"}],
+    "required": ["discriminator"],
+    "discriminator": "discriminator",
+    "properties": {
+        "discriminator": {
+            "type": "string"
+        },
+        "RegionCentroid": {
+            "description": "The centroid of the layout region this road network belongs to",
+            "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        },
+        "LayoutAngle": {
+            "description": "The rotation angle (degrees, about RegionCentroid, matching the region's layout rotation) that maps the region's block layout to world space",
+            "type": "number"
+        },
+        "RoadWidth": {
+            "description": "Road width, curb to curb. Each centerline's curbs lie RoadWidth / 2 to either side of it.",
+            "type": "number"
+        },
+        "Centerlines": {
+            "description": "World-space road centerline segments forming a graph: segments are split at every junction, so two segments meet only at shared endpoints",
+            "type": "array",
+            "items": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Line.json"
+            }
+        }
+    },
+    "additionalProperties": false
+}
