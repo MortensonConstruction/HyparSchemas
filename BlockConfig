@@ -58,7 +58,21 @@
             "description": "True for block types whose facing row in a mirrored pair must be flipped left-to-right as well as front-to-back.",    
             "type": "boolean",
             "default": false
+        },
+        "ContainerClearances": {
+            "description": "Clearance required beyond each face of every container in this block, in metres, in the container's own frame (Top is +Y of the unmirrored, unrotated block). From the container preset.",
+            "type": "object",
+            "required": ["Top", "Bottom", "Left", "Right"],
+            "additionalProperties": false,
+            "properties": {
+                "Top": { "type": "number", "minimum": 0 },
+                "Bottom": { "type": "number", "minimum": 0 },
+                "Left": { "type": "number", "minimum": 0 },
+                "Right": { "type": "number", "minimum": 0 }
+            }
         }
+"PCSClearances": { ...same shape, "From the PCS preset." }
+
     },
     "additionalProperties": false
 }
