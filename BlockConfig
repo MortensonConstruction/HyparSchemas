@@ -54,8 +54,8 @@
             "description": "Megawatt hour capacity of each container",
             "type": "number"
         },
-        "MirrorAcrossBothAxes": { 
-            "description": "True for block types whose facing row in a mirrored pair must be flipped left-to-right as well as front-to-back.",    
+        "MirrorAcrossBothAxes": {
+            "description": "True for block types whose facing row in a mirrored pair must be flipped left-to-right as well as front-to-back.",
             "type": "boolean",
             "default": false
         },
@@ -70,9 +70,19 @@
                 "Left": { "type": "number", "minimum": 0 },
                 "Right": { "type": "number", "minimum": 0 }
             }
+        },
+        "PCSClearances": {
+            "description": "Clearance required beyond each face of every PCS in this block, in metres, in the PCS's own frame. From the PCS preset.",
+            "type": "object",
+            "required": ["Top", "Bottom", "Left", "Right"],
+            "additionalProperties": false,
+            "properties": {
+                "Top": { "type": "number", "minimum": 0 },
+                "Bottom": { "type": "number", "minimum": 0 },
+                "Left": { "type": "number", "minimum": 0 },
+                "Right": { "type": "number", "minimum": 0 }
+            }
         }
-"PCSClearances": { ...same shape, "From the PCS preset." }
-
     },
     "additionalProperties": false
 }
